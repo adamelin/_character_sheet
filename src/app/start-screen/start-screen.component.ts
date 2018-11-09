@@ -22,7 +22,6 @@ export class StartScreenComponent implements OnInit {
   }
 
   public search(): void {
-    this.dataConnector.openCL(this.searchForm.value);
-    this.router.navigate(['character-list']);
+    this.router.navigate([`character-list/${this.searchForm.value}`]);
   }
 }

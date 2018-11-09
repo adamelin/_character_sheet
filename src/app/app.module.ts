@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { StartScreenComponent } from './start-screen/start-screen.component';
 import { CharacterListComponent } from './character-list/character-list.component';
 import {Routes, RouterModule} from '@angular/router';
+import { PreloaderComponent } from './preloader/preloader.component';
 
 const routes: Routes = [
   {
@@ -13,7 +14,7 @@ const routes: Routes = [
     component: StartScreenComponent
   },
   {
-    path: 'character-list',
+    path: 'character-list/:id',
     component: CharacterListComponent
   },
   {
@@ -26,7 +27,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     StartScreenComponent,
-    CharacterListComponent
+    CharacterListComponent,
+    PreloaderComponent
   ],
   imports: [
     BrowserModule,
